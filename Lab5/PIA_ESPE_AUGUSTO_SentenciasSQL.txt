@@ -1,0 +1,54 @@
+-- Q1
+SELECT * from employee;
+
+-- Q2
+SELECT First_name, Last_name
+FROM employee;
+
+-- Q3
+SELECT First_name AS 'Nombre del Empleado'
+FROM employee; 
+
+-- Q4
+SELECT LOWER(Last_name) AS 'Last Name'
+FROM employee; 
+
+-- Q5
+SELECT UPPER(Last_name) AS 'Last Name'
+FROM employee; 
+
+-- Q6
+SELECT DISTINCT Department
+FROM employee; 
+
+-- Q7
+SELECT LEFT(First_name,4) 
+FROM employee; 
+
+-- Q8
+SELECT INSTR('John','h'); 
+
+-- Q9
+SELECT RTRIM(First_name) 
+FROM employee; 
+
+-- Q10
+SELECT LTRIM(First_name) 
+FROM employee; 
+
+-- Q11
+SELECT COUNT(*) 
+FROM employee
+WHERE (First_name LIKE '%a%') AND
+	(Last_name NOT LIKE '%a%'); 
+    
+-- Q12
+SELECT First_name, Department
+FROM employee
+WHERE Joining_date < '2019-04-01'; 
+
+-- Q13
+SELECT ROUND(AVG(Salary)) AS Salary_Average
+FROM employee
+GROUP BY Department 
+ORDER BY Salary_Average DESC; 
